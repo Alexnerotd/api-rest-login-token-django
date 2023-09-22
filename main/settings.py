@@ -33,10 +33,19 @@ LOCAL_APPS = [
 
 THIRD_APPS = [
     'rest_framework',
+    'rest_framework.authtoken',
     'corsheaders',
 ]
 
 INSTALLED_APPS = BASE_APPS + LOCAL_APPS + THIRD_APPS
+
+
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CALSSES": [
+        'rest_framework.authentication.TokenAutthentication',
+    ],
+
+}
 
 
 
